@@ -1,0 +1,15 @@
+def celsius_para_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+def fahrenheit_para_celsius(fahrenheit):
+    return (fahrenheit - 32) * 5/9
+
+# Convertendo de Celsius para Fahrenheit
+celsius = 30
+fahrenheit = celsius_para_fahrenheit(celsius)
+print(f"{celsius} graus Celsius é equivalente a {fahrenheit:.2f} graus Fahrenheit.")
+
+# Convertendo de Fahrenheit para Celsius
+fahrenheit = 86
+celsius = fahrenheit_para_celsius(fahrenheit)
+print(f"{fahrenheit} graus Fahrenheit é equivalente a {celsius:.2f} graus Celsius.")
