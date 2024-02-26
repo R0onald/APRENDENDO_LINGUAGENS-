@@ -1,0 +1,7 @@
+def contar_palavras(frase):
+    palavras = frase.split()
+    return len(palavras)
+
+frase = "Esta é uma frase de exemplo para contar o número de palavras."
+numero_palavras = contar_palavras(frase)
+print("O número de palavras na frase é:", numero_palavras)
