@@ -1,0 +1,36 @@
+def jogar_forca(palavra_secreta):
+    tentativas = 6
+    letras_erradas = []
+    letras_certas = []
+
+    while tentativas > 0:
+        palavra_temporaria = ""
+        for letra in palavra_secreta:
+            if letra in letras_certas:
+                palavra_temporaria += letra
+            else:
+                palavra_temporaria += "_"
+
+        print("Palavra secreta:", palavra_temporaria)
+        print("Tentativas restantes:", tentativas)
+        print("Letras erradas:", letras_erradas)
+
+        if palavra_temporaria == palavra_secreta:
+            print("Parabéns! Você venceu!")
+            return
+
+        letra = input("Digite uma letra: ").lower()
+
+        if letra in letras_certas or letra in letras_erradas:
+            print("Você já tentou esta letra. Tente novamente.")
+        elif letra in palavra_secreta:
+            letras_certas.append(letra)
+        else:
+            letras_erradas.append(letra)
+            tentativas -= 1
+
+    print("Suas tentativas acabaram! A palavra secreta era:", palavra_secreta)
+
+# Palavra secreta para o jogo
+palavra_secreta = "python"
+jogar_forca(palavra_secreta)
