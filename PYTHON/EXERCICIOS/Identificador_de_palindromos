@@ -1,0 +1,11 @@
+def verificar_palindromo(string):
+    # Remover espaços e tornar todas as letras minúsculas
+    string = string.replace(" ", "").lower()
+    # Comparar a string original com sua inversa
+    return string == string[::-1]
+
+texto = "Ame a ema"
+if verificar_palindromo(texto):
+    print(f'A string "{texto}" é um palíndromo.')
+else:
+    print(f'A string "{texto}" não é um palíndromo.')
