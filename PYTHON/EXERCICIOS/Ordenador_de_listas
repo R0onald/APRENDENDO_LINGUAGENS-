@@ -1,0 +1,6 @@
+def ordenar_lista(lista):
+    return sorted(lista)
+
+numeros = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]
+numeros_ordenados = ordenar_lista(numeros)
+print("Lista ordenada:", numeros_ordenados)
